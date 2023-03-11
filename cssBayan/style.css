@@ -1,0 +1,49 @@
+body {
+  background-color: #f2f0e2;
+  color: rgb(0, 64, 255);
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 110%;
+}
+h1 {
+  color: black;
+}
+.accordion__block {
+  background-color: #f2f0e2;
+  width: 50%;
+  margin: 1em auto;
+}
+.accordion__block:hover {
+  color: black;
+}
+.accordion__item {
+  border-top: 0.05em solid gray;
+  padding: 1em 1em;
+}
+.input {
+  position: absolute;
+  appearance: none;
+  width: 0%;
+  height: 0%;
+}
+.label {
+  font-weight: bolder;
+  padding: 0.3em 0.5em;
+  display: block;
+  cursor: pointer;
+}
+
+.text {
+  text-align: center;
+  display: none;
+  padding: 0.3em 0.5em;
+}
+.input:checked ~ .text {
+  display: block;
+}
+.input:checked ~ .label {
+  color: black;
+}
+.meme_img {
+  margin: 0 auto;
+  width: 50%;
+}
