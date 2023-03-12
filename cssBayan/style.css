@@ -5,7 +5,7 @@ body {
   font-family: "Inika", serif;
   font-family: "Inter", sans-serif;
   font-family: "Playfair Display", serif;
-  font-size: 110%;
+  font-size: 130%;
 }
 *:hover {
   transition: 0.5s;
@@ -95,13 +95,19 @@ h1 {
 }
 
 @media (min-width: 830px) {
+  body {
+    font-size: 110%;
+  }
   .input:checked ~ .minus {
+    transition: 0.5s;
     display: block;
   }
   .accordion__block:hover .plus.label {
+    transition: 0.5s;
     display: block;
   }
   .input:checked ~ .plus.label {
+    transition: 0.5s;
     display: none;
   }
   .meme_img {
@@ -109,13 +115,21 @@ h1 {
     width: 50%;
   }
 }
+@media (max-width: 830px) {
+  .accordion__block:hover {
+    pointer-events: none;
+  }
+}
 
 @media (max-width: 560px) {
+  body {
+    font-size: 100%;
+  }
   .label {
     width: 90%;
   }
   .meme_img {
     margin: 0 auto;
-    width: 100%;
+    width: 120%;
   }
 }
