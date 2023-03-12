@@ -1,38 +1,80 @@
 body {
+  box-sizing: border-box;
   background-color: #f2f0e2;
   color: rgb(0, 64, 255);
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Inika", serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 110%;
+}
+*:hover {
+  transition: 0.5s;
 }
 h1 {
   color: black;
 }
+
 .accordion__block {
   background-color: #f2f0e2;
   width: 50%;
   margin: 1em auto;
 }
 .accordion__block:hover {
+  transition: 0.5s;
   color: black;
 }
+
+.input:hover ~ .text {
+  display: block;
+}
+
+.accordion_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .accordion__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   border-top: 0.05em solid gray;
   padding: 1em 1em;
 }
+
 .input {
-  position: absolute;
-  appearance: none;
-  width: 0%;
-  height: 0%;
+  display: none;
+}
+.plus.label {
+  text-align: end;
+  display: none;
+  font-weight: 700;
 }
 .label {
-  font-weight: bolder;
-  padding: 0.3em 0.5em;
+  justify-content: end;
+  width: 50%;
+  font-weight: 600;
   display: block;
   cursor: pointer;
 }
 
+.fa-solid {
+  text-align: end;
+  display: none;
+}
+.accordion__block:hover .plus.label {
+  display: block;
+}
+.input:checked ~ .plus.label {
+  display: none;
+}
+.minus {
+  display: none;
+}
+.input:checked ~ .minus {
+  display: block;
+}
 .text {
+  cursor: pointer;
   text-align: center;
   display: none;
   padding: 0.3em 0.5em;
@@ -43,7 +85,12 @@ h1 {
 .input:checked ~ .label {
   color: black;
 }
+
 .meme_img {
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
+}
+.spanflex {
+  display: flex;
+  justify-content: space-between;
 }
