@@ -1,0 +1,135 @@
+body {
+  box-sizing: border-box;
+  background-color: #f2f0e2;
+  color: rgb(0, 64, 255);
+  font-family: "Inika", serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-size: 130%;
+}
+*:hover {
+  transition: 0.5s;
+}
+h1 {
+  color: black;
+}
+
+.accordion__block {
+  background-color: #f2f0e2;
+  width: 50%;
+  margin: 1em auto;
+}
+.accordion__block:hover {
+  transition: 1s;
+  color: black;
+}
+
+.input:hover ~ .text {
+  display: block;
+}
+
+.accordion_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.accordion__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 0.05em solid gray;
+  padding: 1em 1em;
+}
+.accordion__item:hover {
+  transition: 0.5s;
+}
+.input {
+  display: none;
+}
+.plus.label {
+  text-align: end;
+  display: none;
+  font-weight: 700;
+}
+.label {
+  justify-content: end;
+  width: 50%;
+  font-weight: 600;
+  display: block;
+  cursor: pointer;
+}
+
+.fa-solid {
+  text-align: end;
+  display: none;
+}
+
+.input:checked ~ .plus.label {
+  display: none;
+}
+.minus {
+  color: black;
+  display: none;
+}
+
+.text {
+  cursor: pointer;
+  text-align: center;
+  display: none;
+  padding: 0.3em 0.5em;
+}
+.input:checked ~ .text {
+  display: block;
+}
+.input:checked ~ .label {
+  color: black;
+}
+
+.meme_img {
+  margin: 0 auto;
+  width: 80%;
+}
+.spanflex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 830px) {
+  body {
+    font-size: 110%;
+  }
+  .input:checked ~ .minus {
+    transition: 0.5s;
+    display: block;
+  }
+  .accordion__block:hover .plus.label {
+    transition: 0.5s;
+    display: block;
+  }
+  .input:checked ~ .plus.label {
+    transition: 0.5s;
+    display: none;
+  }
+  .meme_img {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+@media (max-width: 830px) {
+  .accordion__block:hover {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 100%;
+  }
+  .label {
+    width: 90%;
+  }
+  .meme_img {
+    margin: 0 auto;
+    width: 120%;
+  }
+}
